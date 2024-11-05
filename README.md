@@ -1,72 +1,82 @@
-# Superhero Database Project
+# Superheroes Database
 
-Welcome to the Superhero Database Project! This project allows users to manage a collection of superheroes with various features. Follow the instructions below to set up and run the project locally.
+Welcome to the Superheroes Database project! This application allows users to view, add, and manage superhero information with a clean and intuitive interface.
 
 ## Table of Contents
 - [Installation](#installation)
 - [Configuration](#configuration)
-- [Creating Migrations and Tables](#creating-migrations-and-tables)
-- [Running the Project](#running-the-project)
-- [License](#license)
+- [Migration](#migration)
+- [Running the Application](#running-the-application)
 
 ## Installation
 
-1. **Clone the Repository**
+To get started with the Superheroes Database project, follow these steps:
 
-   First, clone the repository to your local machine:
-
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/Roketskyi/Test-task-from-JSN.git
    ```
 
-2. **Install Dependencies**
-
-   Navigate to the client and server directories and install the necessary packages:
-
-   - For the client:
-
+2. **Install the dependencies**:
+   - Navigate to the client directory:
      ```bash
      cd ./client
+     ```
+     Then install the required packages:
+     ```bash
      npm install
      ```
 
-   - For the server:
-
+   - Next, navigate to the server directory:
      ```bash
      cd ../server
+     ```
+     And install the necessary packages:
+     ```bash
      npm install
      ```
 
 ## Configuration
 
-3. **Create the `.env` File**
-
-   Create a `.env` file in the `server` directory and set up your environment variables. Use the following template:
-
+3. **Create a `.env` file in the server directory**:
+   Use the following format as an example:
    ```plaintext
    DATABASE_URL=postgres://username:password@localhost:5432/superhero_db
    PORT=4000
    ```
+   Replace `username`, `password` with your actual PostgreSQL credentials. It is recommended to keep the `PORT` as `4000`.
 
-   Replace `username`, `password`, and any other details with your actual PostgreSQL database credentials.
+## Migration
 
-4. **Create the `uploads` Directory**
-
-   Create a directory named `uploads` in the server directory to store uploaded files:
-
+4. **Create the uploads folder in the server**:
+   Make a new directory named `uploads` in the server directory:
    ```bash
    mkdir server/uploads
    ```
 
-## Creating Migrations and Tables
+5. **Create migrations and tables, and connect to the database**:
+   - Generate a migration file for your tables:
+     ```bash
+     npx sequelize-cli migration:generate --name create-table-name
+     ```
+   - Run the migrations to create the tables in your database:
+     ```bash
+     npx sequelize-cli db:migrate
+     ```
 
-5. **Generate Migrations and Migrate the Database**
+## Running the Application
 
-   Run the following commands to create migrations and set up your database tables:
+6. **Start the application**:
+   - First, navigate to the client directory and start the client application:
+     ```bash
+     cd ./client
+     npm start
+     ```
 
-   ```bash
-   npx sequelize-cli migration:generate --name create-table-name
-   npx sequelize-cli db:migrate
-   ```
+   - Then, open a new terminal, navigate to the server directory, and start the server application:
+     ```bash
+     cd ./server
+     npm start
+     ```
 
-   Make sure to replace `create-table-name` with a meaningful name for your migration.
+Now, your Superheroes Database application should be up and running! Visit `http://localhost:4000` in your browser to access the client application.
