@@ -81,4 +81,4 @@ To get started with the Superheroes Database project, follow these steps:
      npm start
      ```
 
-Now, your Superheroes Database application should be up and running! Visit `http://localhost:4000` in your browser to access the client application.
+Now, your Superheroes Database application should be up and running! Visit `http://localhost:3000` in your browser to access the client application.
