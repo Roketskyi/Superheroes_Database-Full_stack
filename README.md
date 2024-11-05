@@ -12,7 +12,7 @@ Welcome to the Superheroes Database project! This application allows users to vi
 
 To get started with the Superheroes Database project, follow these steps:
 
-<u>(Before you start these steps, you will need to create a database in postgresql called 'superhero_db'.)</u>
+<u>(Before you start these steps, you will need to create a database in postgresql called 'superhero_db')</u>
 
 1. **Clone the repository**:
    ```bash
