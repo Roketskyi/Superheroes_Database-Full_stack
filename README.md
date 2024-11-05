@@ -14,7 +14,7 @@ To get started with the Superheroes Database project, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Roketskyi/Test-task-from-JSN.git
+   git clone https://github.com/Roketskyi/Superheroes_Database-Full_stack.git
    ```
 
 2. **Install the dependencies**:
