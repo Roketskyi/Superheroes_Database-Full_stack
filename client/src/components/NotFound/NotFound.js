@@ -6,7 +6,7 @@ const NotFound = () => {
     const navigate = useNavigate();
 
     const handleGoHome = () => {
-        navigate('/'); // Повернення на головну сторінку
+        navigate('/');
     };
 
     return (
